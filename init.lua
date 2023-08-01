@@ -5,3 +5,6 @@ require('editor')
 
 -- basic keybinds
 require('keys')
+
+-- plugin-manager
+require('plugin')
