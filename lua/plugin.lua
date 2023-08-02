@@ -12,4 +12,12 @@ return require('packer').startup(function(use)
           {'nvim-lua/plenary.nvim'}
       }
   }
+
+  -- catppuccin theme
+  use ({
+      "catppuccin/nvim", as = "catppuccin",
+      config = function()
+          vim.cmd.colorscheme "catppuccin-mocha"
+      end
+  })
 end)
