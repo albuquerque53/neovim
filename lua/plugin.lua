@@ -12,6 +12,11 @@ return require('packer').startup(function(use)
           {'nvim-lua/plenary.nvim'}
       }
   }
+  -- also adding the file browser extension
+  use {
+      "nvim-telescope/telescope-file-browser.nvim",
+      requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  }
 
   -- treesiter for syntax highlight, indenting and many others
   use {
