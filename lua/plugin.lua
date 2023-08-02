@@ -13,6 +13,12 @@ return require('packer').startup(function(use)
       }
   }
 
+  -- treesiter for syntax highlight, indenting and many others
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
+
   -- catppuccin theme
   use ({
       "catppuccin/nvim", as = "catppuccin",
