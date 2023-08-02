@@ -26,4 +26,7 @@ return require('packer').startup(function(use)
           vim.cmd.colorscheme "catppuccin-mocha"
       end
   })
+
+  -- a cool bufferline for tab management
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 end)
