@@ -5,6 +5,9 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- gitsigns for git support
+  use { 'lewis6991/gitsigns.nvim' }
+
   -- telescope is a cool fuzzy finder
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.2',
