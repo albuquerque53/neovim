@@ -5,8 +5,14 @@
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
-local on_attach = function ()
+lsp.ensure_installed({
+  "phpactor",
+  "gopls"
+})
+
+lsp.on_attach(function (client, bufnr)
     local opts = {buffer = 0}
+
     vim.diagnostic.config({
         virtual_text = true,
     })
@@ -22,15 +28,7 @@ local on_attach = function ()
     vim.keymap.set("n", "<leader>df", "<cmd>Telescope diagnostics<cr>", opts)
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
     vim.keymap.set("n", "<C-h>", vim.lsp.buf.signature_help, opts)
-end
-
-lsp.ensure_installed({
-  "phpactor",
-})
-
-lsp.configure("phpactor", {
-    on_attach = on_attach,
-})
+end)
 
 lsp.setup()
 
