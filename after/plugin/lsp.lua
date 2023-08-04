@@ -1,3 +1,6 @@
+-- lsp.lua
+-- here you'll find my LSP configuration
+
 -- lsp-zero:
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
