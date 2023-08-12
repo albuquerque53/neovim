@@ -6,7 +6,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  "phpactor",
+  "intelephense",
   "gopls"
 })
 
@@ -34,7 +34,6 @@ lsp.setup()
 
 -- cmp:
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
   mapping = {
