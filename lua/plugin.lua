@@ -5,6 +5,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  use { 'jwalton512/vim-blade' }
+
   -- gitsigns for git support
   use { 'lewis6991/gitsigns.nvim' }
 
