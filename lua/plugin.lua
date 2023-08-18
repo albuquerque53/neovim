@@ -56,4 +56,10 @@ return require('packer').startup(function(use)
 
   -- a cool bufferline for tab management
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
+  -- to autoclose things
+  use {
+      'windwp/nvim-autopairs',
+      config = function() require('nvim-autopairs').setup {} end
+  }
 end)
